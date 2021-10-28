@@ -1,6 +1,6 @@
 
 #-------------------------------------------------------------------------
-# # Create QA Servers
+# # Create Staging Servers
 #-------------------------------------------------------------------------
 
 resource "aws_instance" "webserver" {
@@ -12,6 +12,6 @@ resource "aws_instance" "webserver" {
   vpc_security_group_ids = DevOps-Linux
   user_data              = file("script.sh")
   tags = {
-    Name = "QA-Webserver"
+    Name = "Staging-Webserver"
   }
 }
