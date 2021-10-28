@@ -9,6 +9,7 @@ resource "aws_instance" "webserver" {
   key_name               = "Windows"
   subnet_id              = "subnet-efa85397"
   count                  = 1
+  security_groups        = "DevOps-Linux"
   user_data              = file("script.sh")
   tags = {
     Name = "QA-Webserver"
