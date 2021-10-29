@@ -6,7 +6,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "environment-state-devops"
-    key    = "QA"
+    key    = "QA/terraform-state"
     region = "us-west-2"
   }
 }
